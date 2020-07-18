@@ -94,48 +94,75 @@ async function promptUser(){
     }
 }
 
+// The reason this function looks wack is because of the way I built it. If the lines are indented, that
+// follows through in the README we're generating.
 const createFileContents = (title,description,installation,usage,license,credits,sources,tests,quests) => {
-    //console.log(title);
-    //console.log(description);
-    //console.log(installation);
-    //console.log(usage);
-    //console.log(license);
-    //console.log(credits);
-    //console.log(sources);
-    //console.log(tests);
-    //console.log(quests);
-
-    const readmeText = [
-    `# ${title}
-    ## Description
+    // We start with the first half of the README
+    let readmeText =
+    `
+# ${title}
     ${description}
-    ## Table of Contents
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [License](#license)
-    * [Credits](#credits)
-    * [Tests](#tests)
-    * [Questions](#questions)
-    ## Installation
-    ${installation}
-    ## Usage
-    ${usage}
-    ## License
-    ${license}
-    ## Credits
-    ${credits}
-    ## Tests
-    ${tests}
-    ## Questions
-    ${questions2}`
-];
 
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributors](#credits)
+* [Sources](#sources)
+* [Tests](#tests)
+* [Questions](#questions)
+
+## Installation
+    ${installation}
+
+## Usage
+    ${usage}
+
+## License
+    ${license}
+
+## Contributors`;
+    // Next we write each contributor on they're own line
+    credits.forEach(element => {
+        if(element[1] === ""){
+            readmeText = readmeText + `
+    Name: ${element[0]}
+            `;
+        } else{
+            readmeText = readmeText + `
+    Name: ${element[0]},   Github Username: ${element[1]}
+            `;
+        }
+    });
+    readmeText = readmeText + `
+## Sources`;
+    sources.forEach(element => {
+        readmeText = readmeText + `
+    ${element}
+        `;
+        
+    });
+
+     readmeText = readmeText + `
+## Tests
+    ${tests}
+
+## Questions
+    ${quests}`;
+
+    console.log(readmeText);
+    writeToFile("newREADME.md", readmeText);
 
 }
 
 // function to write README file
 function writeToFile(fileName, data) {
-
+    fs.writeFile(fileName, data, function(err){
+        if(err){
+            return console.log(err);
+        }
+        console.log("File successfully created!");
+    })
 }
 
 
