@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const { createInflate } = require("zlib");
 
+// Prompts user for all of the information
 async function promptUser(){
     try{
         console.log("Thank you for using the README Generator 2000 Max Epsilon EX");
@@ -33,6 +33,9 @@ async function promptUser(){
         });
         let credits = [];
         let done = false;
+        
+        // These next 2 while loops contain code that checks how many contributors and sources we have so that
+        // we can prompt the user that number of times
         while(!done){
             const { numCred } = await inquirer.prompt({
                 message: "How many team members would you like to credit?",
@@ -122,7 +125,8 @@ const createFileContents = (title,description,installation,usage,license,credits
     ${license}
 
 ## Contributors`;
-    // Next we write each contributor on they're own line
+
+    // Next we write each contributor on they're own line. If there is no github username, we ignore that part
     credits.forEach(element => {
         if(element[1] === ""){
             readmeText = readmeText + `
@@ -134,6 +138,7 @@ const createFileContents = (title,description,installation,usage,license,credits
             `;
         }
     });
+    // Now we do the same for our sources
     readmeText = readmeText + `
 ## Sources`;
     sources.forEach(element => {
@@ -142,7 +147,7 @@ const createFileContents = (title,description,installation,usage,license,credits
         `;
         
     });
-
+    // We finally write the last part of the README
      readmeText = readmeText + `
 ## Tests
     ${tests}
@@ -150,7 +155,6 @@ const createFileContents = (title,description,installation,usage,license,credits
 ## Questions
     ${quests}`;
 
-    console.log(readmeText);
     writeToFile("newREADME.md", readmeText);
 
 }
