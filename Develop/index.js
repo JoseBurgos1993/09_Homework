@@ -6,11 +6,35 @@ const questions = [
     "Write installation instructions: ",
     "Write project usage: ",
     "Write a license for the project: ",
-    "Write constributing: ",
+    "Write credits: ",
     "Write tests: ",
     "Write questions: "
 ];
 
+const readmeText = [
+    `# ${projectName}\n`,
+    "## Description",
+    `${description}`,
+    `## Table of Contents`,
+    "* [Installation](#installation)",
+    "* [Usage](#usage)",
+    "* [License](#license)",
+    "* [Credits](#credits)",
+    "* [Tests](#tests)",
+    "* [Questions](#questions)",
+    "## Installation",
+    `${installation}`,
+    "## Usage",
+    `${usage}`,
+    "## License",
+    `${license}`,
+    "## Credits",
+    `${credits}`,
+    "## Tests",
+    `${tests}`,
+    "## Questions"
+    `${questions2}`,
+];
 // function to write README file
 function writeToFile(fileName, data) {
 
