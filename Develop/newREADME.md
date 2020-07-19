@@ -1,5 +1,5 @@
-# The Great Project1
-I am a long description. Hear me.
+# Project1
+I am a description.
 
 ## Table of Contents
 * [Installation](#installation)
@@ -11,7 +11,7 @@ I am a long description. Hear me.
 * [Questions](#questions)
 
 ## Installation
-Install inquirer.
+Install inquirer please.
 
 ## Usage
 Type things and they happen.
@@ -20,17 +20,14 @@ Type things and they happen.
 Don't do bad things.
 
 ## Contributors
-    Jose Burgos ---- JoseBurgos1993
-    My Dog ---- Bark
-    A potato
+    Jose ---- JoseBurgos1993
+    Bob Bob ---- Boooooooo
 
 ## Sources    
     w3schools
-    
-    wikipedia
 
 ## Tests
-I can't
+no
 
 ## Questions
-Would you like fries with that?
+Question are cool.
