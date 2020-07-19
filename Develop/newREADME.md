@@ -6,7 +6,7 @@ I am a description. Please don't delete me.
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
-* [Contributors](#credits)
+* [Contributors](#contributors)
 * [Sources](#sources)
 * [Tests](#tests)
 * [Questions](#questions)
@@ -21,11 +21,11 @@ Don't do crimes.
 Driver
 
 ## Contributors
-Name: Me,   Github Username: MeGitName0001
+    Me ---- MeGitName0001
             
-Name: Myself
+    Myself
             
-Name: I,   Github Username: XxSephirothxX420
+    I ---- XxSephirothxX420
 
 ## Sources
 w3schools

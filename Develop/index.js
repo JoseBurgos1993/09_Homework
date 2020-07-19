@@ -112,7 +112,7 @@ ${description}
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
-* [Contributors](#credits)
+* [Contributors](#contributors)
 * [Sources](#sources)
 * [Tests](#tests)
 * [Questions](#questions)
