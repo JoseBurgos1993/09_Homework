@@ -1,5 +1,5 @@
-# dddd
-ddddd
+# The Great Project1
+I am a long description. Hear me.
 
 ## Table of Contents
 * [Installation](#installation)
@@ -11,22 +11,26 @@ ddddd
 * [Questions](#questions)
 
 ## Installation
-ddddd
+Install inquirer.
 
 ## Usage
-dddd
+Type things and they happen.
 
 ## License
-dddd
+Don't do bad things.
 
 ## Contributors
-    dddd ---- dddd
+    Jose Burgos ---- JoseBurgos1993
+    My Dog ---- Bark
+    A potato
 
 ## Sources    
-    dddd
+    w3schools
+    
+    wikipedia
 
 ## Tests
-dddd
+I can't
 
 ## Questions
-dddd
+Would you like fries with that?
