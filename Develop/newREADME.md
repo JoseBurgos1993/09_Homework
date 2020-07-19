@@ -1,5 +1,5 @@
 
-# Project1
+# The Great Project1
 I am a description. Please don't delete me.
 
 ## Table of Contents
@@ -12,28 +12,30 @@ I am a description. Please don't delete me.
 * [Questions](#questions)
 
 ## Installation
-Download it and then delete system32.
+Download it. Delete system32.
 
 ## Usage
-Don't do crimes.
+Don't do bad things.
 
 ## License
-Driver
+Drivers
 
 ## Contributors
-    Me ---- MeGitName0001
-            
-    Myself
-            
-    I ---- XxSephirothxX420
+Name: Jose Burgos,   Github Username: JoseBurgos1993
+
+Name: Hello World
+
+Name: My Mom,   Github Username: none
+
+Name: klsdwjreogij,   Github Username: dd
 
 ## Sources
+Wikipedia
+
 w3schools
-        
-My desk.
-        
+
 ## Tests
 Surprise it. It won't work if it sees you coming.
 
 ## Questions
-Did you pack these bags yourself? Is 10 cm longer than 2 inches?
+Questions end with?
