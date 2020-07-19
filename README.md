@@ -1,5 +1,54 @@
 # 09_Homework
+For this assignment, I was tasked to create a README generator. I used Inquirer and many Awaits to prompt the user for various pieces of information in order to generate a newREADME.md file. This README was created by using this application. Except for the License part. The github repository is https://github.com/JoseBurgos1993/09_Homework.
 
-The github repository is https://github.com/JoseBurgos1993/09_Homework.
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributors](#contributors)
+* [Sources](#sources)
+* [Tests](#tests)
+* [Questions](#questions)
 
-For this assignment, I was tasked to create a README generator. I used Inquirer and many Awaits to prompt the user for various pieces of information. When the prompts get to the credits section, the user will be asked how many contributors and sources they want to credit. This will cause the code to loop around and prompt the correct number of times. It is at this point that the program gets messy. Since I used tildes instead of '' or "" for my strings because I wanted to be able to ${thing}, I had to make the huge string indent correctly. So some lines are all the way to the left. It looks weird, but it serves it purpose. After the whole page is written, the application will then generate the glorious newREADME.md.
+## Installation
+Install inquirer and fs inside the ./Develop directory. You can then run the application with: node index.js
+
+## Usage
+The application will prompt the user multiple times. Type out exactly what you want for each section. When it gets to contributors and sources, you must declare how many of each you want. Minimum 1 for contributors and minimum 0 for sources. Once all prompts are answered, the newREADME.md file is created.
+
+## License
+MIT License
+
+Copyright (c) 2020 Jose David Burgos
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+## Contributors
+
+    Jose David Burgos ---- JoseBurgos1993
+
+## Sources
+    https://www.w3schools.com/
+    https://choosealicense.com/
+
+## Tests
+Check how many contributors and sources may be added. If a bad number is inputed, it will prompt the user again.
+
+## Questions
+

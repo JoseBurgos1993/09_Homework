@@ -23,7 +23,7 @@ async function promptUser(){
         });
 
         const { usage } = await inquirer.prompt({
-            message: "What is the usage agreement?",
+            message: "Explain how to use the application:",
             name: "usage"
         });
 
@@ -81,7 +81,7 @@ async function promptUser(){
         }
 
         const { tests } = await inquirer.prompt({
-            message: "Write how to test your application.",
+            message: "Write some tests for your application:",
             name: "tests"
         });
 
@@ -132,22 +132,21 @@ ${license}
     credits.forEach(element => {
         if(element[1] === ""){
             readmeText = readmeText +
-`
-    ${element[0]}
+`    ${element[0]}
 `;
         } else{
             readmeText = readmeText + 
-`
-    ${element[0]} ---- ${element[1]}
+`    ${element[0]} ---- ${element[1]}
 `;
         }
     });
 
     // Now we do the same for our sources
-    readmeText = readmeText + `## Sources`;
+    readmeText = readmeText + `
+## Sources`;
     sources.forEach(element => {
         readmeText = readmeText +
-`
+`    
     ${element}
 `;
     });
