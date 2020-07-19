@@ -1,6 +1,6 @@
 
 # Project1
-    I am a description. Please don't delete me.
+I am a description. Please don't delete me.
 
 ## Table of Contents
 * [Installation](#installation)
@@ -12,25 +12,25 @@
 * [Questions](#questions)
 
 ## Installation
-    Download it and then delete system32.
+Download it and then delete system32.
 
 ## Usage
-    Don't do crimes.
+Don't do crimes.
 
 ## License
-    Driver
+Driver
 
 ## Contributors
-    Name: Me,   Github Username: MeGitName0001
+Name: Me,   Github Username: MeGitName0001
             
-    Name: Myself
+Name: Myself
             
-    Name: I,   Github Username: XxSephirothxX420
-    
+Name: I,   Github Username: XxSephirothxX420
+
 ## Sources
-    w3schools
+w3schools
         
-    My desk.
+My desk.
         
 ## Tests
 Surprise it. It won't work if it sees you coming.

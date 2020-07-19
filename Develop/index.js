@@ -33,7 +33,7 @@ async function promptUser(){
         });
         let credits = [];
         let done = false;
-        
+
         // These next 2 while loops contain code that checks how many contributors and sources we have so that
         // we can prompt the user that number of times
         while(!done){
@@ -98,13 +98,15 @@ async function promptUser(){
 }
 
 // The reason this function looks wack is because of the way I built it. If the lines are indented, that
-// follows through in the README we're generating.
+// follows through in the README we're generating. It looked way worse when I only pushed the strings
+// to the left side. Trust me.
+
 const createFileContents = (title,description,installation,usage,license,credits,sources,tests,quests) => {
-    // We start with the first half of the README
-    let readmeText =
-    `
+// We start with the first half of the README
+let readmeText =
+`
 # ${title}
-    ${description}
+${description}
 
 ## Table of Contents
 * [Installation](#installation)
@@ -116,47 +118,46 @@ const createFileContents = (title,description,installation,usage,license,credits
 * [Questions](#questions)
 
 ## Installation
-    ${installation}
+${installation}
 
 ## Usage
-    ${usage}
+${usage}
 
 ## License
-    ${license}
+${license}
 
 ## Contributors`;
 
-    // Next we write each contributor on they're own line. If there is no github username, we ignore that part
-    credits.forEach(element => {
-        if(element[1] === ""){
-            readmeText = readmeText + `
-    Name: ${element[0]}
-            `;
-        } else{
-            readmeText = readmeText + `
-    Name: ${element[0]},   Github Username: ${element[1]}
-            `;
-        }
-    });
-    // Now we do the same for our sources
-    readmeText = readmeText + `
+// Next we write each contributor on they're own line. If there is no github username, we ignore that part
+credits.forEach(element => {
+if(element[1] === ""){
+readmeText = readmeText + `
+Name: ${element[0]}
+`;
+} else{
+readmeText = readmeText + `
+Name: ${element[0]},   Github Username: ${element[1]}
+`;
+}
+});
+// Now we do the same for our sources
+readmeText = readmeText + `
 ## Sources`;
-    sources.forEach(element => {
-        readmeText = readmeText + `
-    ${element}
-        `;
-        
-    });
-    // We finally write the last part of the README
-     readmeText = readmeText + `
+sources.forEach(element => {
+readmeText = readmeText + `
+${element}
+`;
+    
+});
+// We finally write the last part of the README
+readmeText = readmeText + `
 ## Tests
-    ${tests}
+${tests}
 
 ## Questions
-    ${quests}`;
+${quests}`;
 
-    writeToFile("newREADME.md", readmeText);
-
+writeToFile("newREADME.md", readmeText);
 }
 
 // function to write README file
