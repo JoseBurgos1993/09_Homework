@@ -103,57 +103,64 @@ async function promptUser(){
 
 const createFileContents = (title,description,installation,usage,license,credits,sources,tests,quests) => {
     // We start with the first half of the README
-    let readmeText = "```" + 
-        `# ${title}
-        ${description}
+    let readmeText = 
+`# ${title}
+${description}
 
-        ## Table of Contents
-        * [Installation](#installation)
-        * [Usage](#usage)
-        * [License](#license)
-        * [Contributors](#contributors)
-        * [Sources](#sources)
-        * [Tests](#tests)
-        * [Questions](#questions)
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributors](#contributors)
+* [Sources](#sources)
+* [Tests](#tests)
+* [Questions](#questions)
 
-        ## Installation
-        ${installation}
+## Installation
+${installation}
 
-        ## Usage
-        ${usage}
+## Usage
+${usage}
 
-        ## License
-        ${license}
+## License
+${license}
 
-        ## Contributors
-        ` + "```";
+## Contributors
+`;
 
     // Next we write each contributor on they're own line. If there is no github username, we ignore that part
     credits.forEach(element => {
         if(element[1] === ""){
-            readmeText = readmeText + `
-                ${element[0]}   `;
+            readmeText = readmeText +
+`
+    ${element[0]}
+`;
         } else{
-            readmeText = readmeText + `
-                ${element[0]} ---- ${element[1]}   `;
+            readmeText = readmeText + 
+`
+    ${element[0]} ---- ${element[1]}
+`;
         }
     });
 
     // Now we do the same for our sources
     readmeText = readmeText + `## Sources`;
     sources.forEach(element => {
-        readmeText = readmeText + ` ${element}
-        `;
+        readmeText = readmeText +
+`
+    ${element}
+`;
     });
 
     // We finally write the last part of the README
-    readmeText = readmeText + "```" + `
-    ## Tests
-    ${tests}
+    readmeText = readmeText +
+`
+## Tests
+${tests}
 
-    ## Questions
-    ${quests}
-    ` + "```";
+## Questions
+${quests}
+`;
 
     writeToFile("newREADME.md", readmeText);
 }
