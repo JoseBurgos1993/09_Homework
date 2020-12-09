@@ -1,5 +1,5 @@
 # README Generator
-For this assignment, I was tasked to create a README generator. I used Inquirer and many Awaits to prompt the user for various pieces of information in order to generate a newREADME.md file. This README was created by using this application. Except for the License part. The github repository is https://github.com/JoseBurgos1993/09_Homework. Here is a video demonstrating the application https://drive.google.com/file/d/122HSzc2diuBOVoP09RgWRimd5jNP5Xf5/view?usp=sharing.
+For this assignment, I was tasked to create a README generator. I used Inquirer and many Awaits to prompt the user for various pieces of information in order to generate a newREADME.md file. This README was created by using this application. Except for the License part. The github repository is https://github.com/JoseBurgos1993/README-Generator. Here is a video demonstrating the application https://drive.google.com/file/d/122HSzc2diuBOVoP09RgWRimd5jNP5Xf5/view?usp=sharing.
 
 ## Table of Contents
 * [Installation](#installation)
